@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="fahrenheit"></p>
+    <script>
+        //2b. Create a function called fahrenheitToCelsius:- Now take a Fahrenheit temperature from the user and convert it to Celsius- Return string as output: "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
+
+        function fahrenheitToCelsius(far) {
+            const fToCel = (far - 32) * 5 / 9;
+            const message = `${far} degrees Celsius is ${fToCel} degrees Fahrenheit.`;
+            return message;
+        }
+
+        let userIn = prompt("Please enter a number in celsius: ");
+        document.getElementById("fahrenheit").innerHTML = fahrenheitToCelsius(userIn);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="traverse"></div>
+    <script>
+        //4. Traverse through an array (either number or string array) and display each value with their index position using Array.map method
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let result = arr.map((currElement, index) => `<p> The index: ${index} is the element: ${currElement} </p>`
+        )
+        document.getElementById("traverse").innerHTML = result.join('');
+
+    </script>
+</body>
+
+</html>

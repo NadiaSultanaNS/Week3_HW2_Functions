@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="swim"></p>
+    <p id="user"></p>
+    <script>
+        //3. Create an array of at least five Student objects with the following properties: name, activity, gender- Filter all those students who are into swimming- Filter all those students who are in the activity entered by the user. For example, if the user enters "Basketball" display only students with basketball as their activity
+
+        let array = [
+            { name: "Jho", activity: "swimming", gender: "male" },
+            { name: "Doe", activity: "sports", gender: "male" },
+            { name: "Tom", activity: "swimming", gender: "male" },
+            { name: "Jim", activity: "football", gender: "male" },
+            { name: "Koy", activity: "swimming", gender: "male" }
+        ];
+        function filterSwim() {
+            return array.filter(student => student.activity === "swimming")
+        }
+        let filterStu = filterSwim().map(student => student.name);
+        document.getElementById("swim").innerHTML = filterStu;
+
+        let userIn = prompt("Please enter an activity: ");
+        function filterActivity() {
+            return array.filter(student => student.activity === userIn);
+        }
+        let filteredbyActivity = filterActivity().map(student => student.name);
+        document.getElementById("user").innerHTML = filteredbyActivity;
+
+
+
+    </script>
+</body>
+
+</html>
